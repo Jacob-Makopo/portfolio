@@ -12,10 +12,11 @@ hr {
   border: 1px solid #ccc;
   margin: 20px 0; 
 }
+
 </style>
 </head>
 <body>
-    <div class="container" style="background-color: #F0F0F0;">
+    <div class="container" style="background-color: #F0F0F0; padding: 20px;"> <!-- Added padding -->
     <div class="header">
         <div class="logo">
             <img src="Assets/images/logo.jpg" alt="Logo" style="border-radius: 50%; width: 100px; height: 100px; margin-left: 10px;" >
@@ -38,23 +39,30 @@ hr {
     </div>
     
 <!--To change According to page-->
-    
-    <div class="content">
-        <div class="left-column">
-            <h2>Jacob Kagiso Makopo</h2>
-            <p>A versatile and highly skilled developer with a proven track record of success.
-                 Proficient in logical problem-solving and adept at navigating diverse programming challenges. </p>
-            <p>
-                Exhibits exceptional communication skills, 
-                seamlessly engaging with individuals at all levels, 
-                and readily adapting to dynamic environments. Known for reliability, 
-                punctuality, and an insatiable appetite for mastering new tasks and skills with rapid proficiency.</p>
-        </div>
-        
-        <div class="right-column">
-            <img src="Assets/images/Jacob.JPG" alt="your image" style="width: 400px; height: 400px;">
-        </div>
-    </div>
+ <br><br>
+<form>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Simba International">
+  </div>
+
+  <div class="form-group">
+    <label for="Email">Email</label>
+    <input type="text" id="Email" name="Email" placeholder="Simba@international.com">
+  </div>
+
+  <div class="form-group">
+    <label for="Subject">Subject</label>
+    <input type="text" id="Subject" name="Subject" placeholder="Job offer">
+  </div>
+
+  <div class="form-group">
+    <label for="Message">Message</label>
+    <textarea id="Message" name="Message" placeholder="Congratulations! we have a job offer for you"></textarea>
+  </div>
+  
+  <button type="submit" class="button">Submit</button>
+</form>
 <!--To change According to page-->
 
 
