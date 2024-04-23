@@ -2,6 +2,12 @@ body {
     font-family: 'Roboto Mono', monospace; 
     margin: 0;
     padding: 0;
+    transition: opacity 0.5s ease; 
+}
+
+
+body.loading {
+    opacity: 0;
 }
 
 .container {
@@ -21,11 +27,112 @@ body {
     padding: 10px;
 }
 
-.menu button {
-    border: none;
-    background-color: #fff;
-    cursor: pointer;
+/* CSS */
+.button-49,
+.button-49:after {
+  width: auto; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+  line-height: auto; /* Adjust line height as needed */
+  font-size: 20px; /* Font size */
+  font-family: 'Bebas Neue', sans-serif; /* Font family */
+  background: linear-gradient(45deg, transparent 5%, #B8B8B8 5%); /* Gradient background */
+  border: 0; /* No border */
+  color: #fff; /* Text color */
+  letter-spacing: 3px; /* Letter spacing */
+  box-shadow: 6px 0px 0px #848484; /* Box shadow */
+  outline: transparent; /* No outline */
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  display: inline-block; /* Display as inline block */
+  padding: 10px 20px; /* Adjust padding as needed */
+  margin: 10px; /* Adjust margin as needed */
+  text-decoration: none; /* Remove underline */
 }
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: attr(data-text); /* Use the content attribute to set text */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #848484 3%, #848484 5%, #B8B8B8 5%); /* Gradient background */
+  text-shadow: -3px -3px 0px #FFFFFF, 3px 3px 0px #848484; /* Text shadow */
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch; /* Glitch animation */
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    line-height: auto; /* Adjust line height as needed */
+  }
+}
+
+
 
 .video-player {
     width: 100%; 
@@ -210,39 +317,148 @@ body {
         }
         
 /*contact*/
-/* Style for input boxes */
+/* CSS for form */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
-  .form-group label {
+  label {
     display: block;
     margin-bottom: 5px;
   }
   
-  .form-group input[type="text"],
-  .form-group textarea {
-    width: calc(100% - 20px);
-    padding: 8px;
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
   }
   
-  .form-group textarea {
-    height: 100px; 
+  textarea {
+    height: 150px; /* Adjust as needed */
   }
   
-  /* Style for button */
-  .button {
-    background-color: #07549c; /* Green */
+  button {
+    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-top: 10px;
+    margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
   }
+  
+  /* Additional CSS styles for better visibility of hr tag */
+        hr {
+            border: 1px solid #ccc;
+            margin: 20px 0; 
+        }
+        .map-container {
+            width: 100%;
+            height: 450px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+       /*-----------------------*/
+       .section-container {
+        /* Your section-container styles */
+    }
+    
+    .card-container {
+        display: flex;
+        justify-content: space-between; /* Adjust this value as needed */
+    }
+    
+    .card {
+        position: relative;
+        width: 300px; /* Adjust card width as needed */
+        margin: 10px; /* Adjust margin as needed */
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    
+    .circle {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200%;
+        height: 200%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all 0.3s ease;
+    }
+    
+    .card:hover .circle {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .card:hover .overlay {
+        opacity: 1;
+    }
+    
+    .circle svg {
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+    
+    p {
+        position: relative;
+        z-index: 1;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    
+    
+      /* style.css */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.blur-background {
+    filter: blur(5px);
+}

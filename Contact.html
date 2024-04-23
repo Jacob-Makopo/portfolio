@@ -3,17 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Jacob</title>
+<title>Contact Jacob</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="Assets/css/style.css">
-<style>
-/* Additional CSS styles for better visibility of hr tag */
-hr {
-  border: 1px solid #ccc;
-  margin: 20px 0; 
-}
-
-</style>
 </head>
 <body>
     <div class="container" style="background-color: #F0F0F0; padding: 20px;"> <!-- Added padding -->
@@ -23,11 +15,10 @@ hr {
         </div>
         <!--This is the navigation-->
         <div class="menu">
-            <a href="index.html"><button>Home</button></a>
-            <a href="About.html"><button>About Me</button></a>
-            <a href="Contact.html"><button>Contact Us</button></a>
-
-        </div>
+          <a href="index.html" class="button-49" role="button">Home</a>
+          <a href="About.html" class="button-49" role="button">About Me</a>
+          <a href="Contact.html" class="button-49" role="button">Contact Us</a>
+      </div>
     </div>
    
     <!--This is the video code-->
@@ -40,52 +31,48 @@ hr {
     
 <!--To change According to page-->
  <br><br>
-<form>
+ <form action="https://formspree.io/f/xnqelvbk" method="POST">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Simba International">
+    <input type="text" id="name" name="name" placeholder="Simba International" required>
   </div>
 
   <div class="form-group">
     <label for="Email">Email</label>
-    <input type="text" id="Email" name="Email" placeholder="Simba@international.com">
+    <input type="email" id="Email" name="Email" placeholder="Simba@international.com" required>
   </div>
 
   <div class="form-group">
     <label for="Subject">Subject</label>
-    <input type="text" id="Subject" name="Subject" placeholder="Job offer">
+    <input type="text" id="Subject" name="Subject" placeholder="Job offer" required>
   </div>
 
   <div class="form-group">
     <label for="Message">Message</label>
-    <textarea id="Message" name="Message" placeholder="Congratulations! we have a job offer for you"></textarea>
+    <textarea id="Message" name="Message" placeholder="Congratulations! we have a job offer for you" required></textarea>
   </div>
   
   <button type="submit" class="button">Submit</button>
 </form>
+
+
 <!--To change According to page-->
 
 
-    <hr> <!-- HR TAG-->
-    
-    <div class="location-container">
-        <div class="location-info">
-            <h2>Address</h2>
-            <p>1337 Block FF </p>
-            <p>Soshanguve,Pretoria</p>
-            <p>0152</p>
+        <hr> <!-- HR-->
+        
+        <div class="location-container" id="location-container">
+            <!-- Location-->
         </div>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.76834579438!2d-74.11976363513875!3d40.69767000516922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a52b80ed9e5%3A0xf03e3e7436d15cd1!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1638096504563!5m2!1sen!2sin" width="70%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		
+<div class="social-media">
+            <a href="#" target="_blank"><img src="Assets/images/twitter.png" alt="Twitter"></a>
+            <a href="https://github.com/Jacob-Makopo/portfolio" target="_blank"><img src="Assets/images/github.png" alt="Github"></a>
+            <a href="https://www.linkedin.com/in/jacob-makopo-8561931b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img src="Assets/images/linkedIn.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/jacob_makopo?igsh=eG9pZjYzeDM5OGF1&utm_source=qr" target="_blank"><img src="Assets/images/instagram.png" alt="Instagram"></a>
         </div>
-    </div>
-    <div class="social-media">
-        <a href="#" target="_blank"><img src="Assets/images/twitter.png" alt="Twitter"></a>
-        <a href="#" target="_blank"><img src="Assets/images/github.png" alt="Github"></a>
-        <a href="#" target="_blank"><img src="Assets/images/linkedIn.png" alt="LinkedIn"></a>
-        <a href="#" target="_blank"><img src="Assets/images/instagram.png" alt="Instagram"></a>
-    </div>
     
 </div>
+<script src="Assets/js/script.js"></script>
 </body>
 </html>
